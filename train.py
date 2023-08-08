@@ -12,6 +12,8 @@ from src.deep_q_network import DeepQNetwork
 from src.tetris import Tetris
 from collections import deque
 
+NAME="tetris_02"
+
 
 def get_args():
     parser = argparse.ArgumentParser(
@@ -137,7 +139,7 @@ def train(opt):
         if epoch > 0 and epoch % opt.save_interval == 0:
             torch.save(model, "{}/tetris_{}".format(opt.saved_path, epoch))
 
-    torch.save(model, "{}/tetris".format(opt.saved_path))
+    torch.save(model, "{}/{}".format(opt.saved_path, NAME))
 
 
 if __name__ == "__main__":
