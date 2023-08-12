@@ -110,9 +110,9 @@ class Tetris:
         curr_piece = [row[:] for row in self.piece]
         if piece_id == 0:  # O piece
             num_rotations = 1
-        elif piece_id == 2 or piece_id == 3 or piece_id == 4:
+        elif piece_id == 2 or piece_id == 3 or piece_id == 4: # T, S, Z piece
             num_rotations = 2
-        else:
+        else: # L piece
             num_rotations = 4
 
         for i in range(num_rotations):
